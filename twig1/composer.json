@@ -1,0 +1,17 @@
+{
+    "name": "terales/twig-if-perfomance",
+    "description": "Reserch: compile perfomance for inline vs included templates into `if` branch",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TerAleS",
+            "email": "terales@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "~1.0",
+        "twig/extensions": "1.3"
+    }
+}

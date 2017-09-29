@@ -1,0 +1,440 @@
+{% if (_test_var1 or _test_var2) and _test_var3 < _test_var4 %}
+  {% if _test_var5 %}
+    {% if _test_var6 %}
+      <p>
+        Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+      </p>
+    {% else %}
+      <p>
+        <img src="/dummy-image.png" alt="Dummy alt goes here">Dummy text node goes here<strong>Dummy text node goes here</strong>Dummy text node goes here<a href="#">Dummy text node goes here</a> to show all entries ({{ _test_var4|number_format }}).
+      </p>
+    {% endif %}
+  {% else %}
+    {% if _test_var6 %}
+      <p>
+        Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+      </p>
+    {% else %}
+      <p>
+        <img src="/dummy-image.png" alt="Dummy alt goes here">Dummy text node goes here<strong>Dummy text node goes here</strong>Dummy text node goes here<a href="#">Dummy text node goes here</a> to show all entries ({{ _test_var4|number_format }}).
+      </p>
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+<table class="some classes" id="some-id">
+  <thead>
+    <tr>
+      {% if _test_var5 %}
+        <td class="some classes" id="some-id">
+          {{ _test_var8.date }}
+        </td>
+        <td class="some classes" id="some-id">
+          {{ _test_var8.service_provider }}
+        </td>
+        <td class="some classes" id="some-id">
+          Dummy text node goes here
+        </td>
+        <td class="some classes" id="some-id">
+          {{ _test_var8.comment }}
+        </td>
+        <td class="some classes" id="some-id">
+          Dummy text node goes here
+        </td>
+      {% else %}
+        <td class="some classes" id="some-id">
+          {{ _test_var8.date }}
+        </td>
+        <td class="some classes" id="some-id">
+          {{ _test_var8.service_provider }}
+        </td>
+        <td class="some classes" id="some-id">
+          Dummy text node goes here
+        </td>
+        <td class="some classes" id="some-id">
+          {{ _test_var8.comment }}
+        </td>
+        <td class="some classes" id="some-id">
+          Dummy text node goes here
+        </td>
+      {% endif %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for _test_array_entry in _test_array_entry %}
+      {% if _test_array_entry.attribute == "y" and _test_array_entry.attribute == "y" and _test_array_entry.attribute == "y" %}
+        {% if _test_array_entry.attribute < 0 %}
+          {% set _internal_var2 = 'y' %}
+        {% elseif _test_array_entry.attribute > 0 %}
+          {% set _internal_var2 = 'y' %}
+        {% elseif _test_array_entry.attribute == null %}
+          {% set _internal_var2 = '' %}
+        {% else %}
+          {% set _internal_var2 = 'y' %}
+        {% endif %}
+        <tr>
+          {% if _test_var5 %}
+            <td class="some classes" data-order="{{ _test_array_entry.attribute }}">
+              {{ _test_array_entry.rating|date("M d, Y") }}
+            </td>
+          {% else %}
+            <td class="some classes" data-order="{{ _test_array_entry.attribute }}">
+              {{ _test_array_entry.rating|date("M d, Y") }}
+            </td>
+          {% endif %}
+          {% if _test_var1 or _test_var2 or _test_var8 %}
+            {% set _internal_var6 = '' %}
+            {% if _test_var5 %}
+              <td class="some classes" data-order="{{ _internal_var6 }}">
+            {% else %}
+              <td data-order="{{ _internal_var6 }}">
+            {% endif %}
+              <div class="some classes">
+                <div class="some classes">
+                  {% if _test_var5 %}
+                    {% if not _test_var10 %}
+                      Dummy
+                    {% endif %}
+                  {% else %}
+                    {% if not _test_var10 %}
+                      Dummy
+                    {% endif %}
+                  {% endif %}
+                </div>
+                <div class="some classes">
+                  {% if not _test_var5 %}
+                    {% set _internal_var5 = '' %}
+                    {% if _internal_var5 %}
+                      <p class="some classes">
+                        {{ _internal_var5 }}
+                      </p>
+                    {% endif %}
+                  {% endif %}
+
+                  {% if _test_var5 %}
+                    {% set _internal_var4 = '' %}
+                    <p class="some classes">
+                      <a href="#">{{ _internal_var6 }}</a>
+                    </p>
+                    {% if _internal_var4 %}
+                      <p class="some classes">{{ _internal_var4 }}</p>
+                    {% endif %}
+                  {% else %}
+                    <p class="some classes">
+                      <a href="#">{{ _internal_var6 }}</a>
+                    </p>
+                  {% endif %}
+
+                  {% set _internal_var1 = '' %}
+
+                  {% if _internal_var1.avg < 3.0 %}
+                    {% set _internal_var3 = 'y' %}
+                  {% elseif _internal_var1.avg >= 4.0 %}
+                    {% set _internal_var3 = 'y' %}
+                  {% else %}
+                    {% set _internal_var3 = 'y' %}
+                  {% endif %}
+
+                  {% if not _test_var5 %}
+                    <p class="some classes">
+                      Dummy text node goes here<span class="{{ _internal_var3 }}"><strong>{{ _internal_var1.avg|round(2) }}</strong></span><br>
+                      {{ _internal_var1.count }} {% if _internal_var1.count == 1 %}_test_array_entry{% else %}entries{% endif %}<br>
+                      {% set _internal_var5 = '' %}
+                      {% if _internal_var5 %}
+                        Dummy text node goes here<br>
+                      {% endif %}
+                      {% if _test_array_entry.attribute %}
+                        Dummy text node goes here
+                      {% endif %}
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+            </td>
+          {% else %}
+            <td>
+              <div class="some classes">
+                <div class="some classes">
+                  <img alt="Dummy alt goes here" src="/dummy-image.png" class="some classes">
+                </div>
+                <div class="some classes">
+                  <p class="some classes">
+                    <img src="/dummy-image.png" alt="Dummy alt goes here">Dummy text node goes here
+                  </p>
+                </div>
+              </div>
+            </td>
+          {% endif %}
+          {% set _internal_var6 = '' %}
+          {% if _test_var5 %}
+            <td class="some classes" data-order="{{ _internal_var6 }}">
+              {{ _internal_var6|number_format }}
+            </td>
+          {% else %}
+            <td class="some classes" data-order="{{ _internal_var6 }}">
+              {{ _internal_var6|number_format }}
+            </td>
+          {% endif %}
+          {% if _test_array_entry.attribute > 0 %}
+            {% set _internal_var7 = '' %}
+          {% endif %}
+          {% if _test_var5 %}
+            <td class="{{ _internal_var2 }} bb-comment-compact">
+              {% if _test_var1 or _test_var2 or _test_var8 %}
+                {{ _test_array_entry.attribute }}<br>
+                {% if _test_array_entry.attribute > 0 %}
+                  {% if _internal_var7.replacing > 0 %}
+                    {% set _internal_var7_two = '' %}
+                  {% endif %}
+                  {% if _internal_var7.replacing > 0 %}
+                    <p class="some classes" data-toggle="popover" title="Dummy title goes here" data-content="Some popovercontent">Dummy text node goes here</p>
+                  {% else %}
+                    <p class="some classes" data-toggle="popover" title="Dummy title goes here" data-content="Some popovercontent">Dummy text node goes here</p>
+                  {% endif %}
+                {% endif %}
+                {% if _test_array_entry.attribute and _test_array_entry.attribute %}
+                  <p class="some classes"><strong>Dummy text node goes here</strong> {% if _test_array_entry.rating|date("M d, Y") %}){% endif %} {{ _test_array_entry.attribute }}</p>
+                {% elseif not _test_array_entry.attribute and _test_var11 %}
+                  <form action="#{{ _test_array_entry.attribute }}" method="post">
+                    <div class="some classes">
+                      <br>
+                      <p class="some classes">
+                        <strong>Dummy text node goes here</strong>
+                      </p>
+                      <input readonly="" type="text" id="some-id" size="3" maxlength="3" value="field-value" class="some classes">Dummy text node goes here<input type="text" id="some-id" name="field-name" value="" maxlength="200" size="30"   class="some classes" placeholder="Some placeholder">
+                      <input type="hidden" name="field-name" value="{{ _test_array_entry.attribute }}">
+                      <input type="hidden" name="field-name" value="">
+                      <input type="submit" class="some classes" value="field-value">
+                    </div>
+                  </form>
+                  {% if _test_array_entry.attribute in _test_array_2 %}
+                    <div class="some classes">
+                      <a href="#">
+                        Dummy text node goes here
+                      </a>
+                    </div>
+                  {% else %}
+                    <div class="some classes">
+                      <a href="#" target="_blank">Dummy text node goes here</a>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% else %}
+                <p class="some classes">
+                  <img src="/dummy-image.png" alt="Dummy alt goes here">Dummy text node goes here
+                </p>
+              {% endif %}
+              {% if _test_array_entry.attribute == _test_var14 and _test_var15 %}
+                <br><a href="#"><i class="some classes" aria-hidden="true"></i></a>Dummy text node goes here
+              {% elseif _test_array_entry.attribute == _test_var14 and _test_var16 %}
+                <br><a href="#"><i class="some classes" aria-hidden="true"></i></a>Dummy text node goes here<a href="#">Dummy text node goes here</a>
+                <br><a href="#"><i class="some classes" aria-hidden="true"></i></a>Dummy text node goes here<a href="#">Dummy text node goes here</a>
+              {% endif %}
+            </td>
+          {% else %}
+            <td class="{{ _internal_var2 }} some classes">
+              {% if _test_var1 or _test_var2 or _test_var8 %}
+                {{ _test_array_entry.attribute }}<br>
+                {% if _test_array_entry.attribute > 0 %}
+                  {% if _test_var17.replacing > 0 %}
+                    {% set _test_var17_two = '' %}
+                  {% endif %}
+                  {% if _test_var17.replacing > 0 %}
+                    <p class="some classes" data-toggle="popover" title="Dummy title goes here" data-content="Some popovercontent">Dummy text node goes here</p>
+                  {% else %}
+                    <p class="some classes" data-toggle="popover" title="Dummy title goes here" data-content="Some popovercontent">Dummy text node goes here</p>
+                  {% endif %}
+                {% endif %}
+                {% if _test_array_entry.attribute and _test_array_entry.attribute %}
+                  <p class="some classes"><strong>Dummy text node goes here</strong> {% if _test_array_entry.rating|date("M d, Y") %}){% endif %} {{ _test_array_entry.attribute }}</p>
+                {% elseif not _test_array_entry.attribute and _test_var11  %}
+                  <form action="#{{ _test_array_entry.attribute }}" method="post">
+                    <div class="some classes">
+                      <br>
+                      <p class="some classes">
+                        <strong>Dummy text node goes here</strong>
+                      </p>
+                      <input readonly="" type="text" id="some-id" size="3" maxlength="3" value="field-value" class="some classes">Dummy text node goes here<input type="text" id="some-id" name="field-name" value="" maxlength="200" size="30"   class="some classes" placeholder="Some placeholder">
+                      <input type="hidden" name="field-name" value="{{ _test_array_entry.attribute }}">
+                      <input type="hidden" name="field-name" value="">
+                      <input type="submit" class="some classes" value="field-value">
+                    </div>
+                  </form>
+                  {% if _test_array_entry.attribute in _test_array_2 %}
+                    <div class="some classes">
+                      <a href="#">
+                        Dummy text node goes here
+                      </a>
+                    </div>
+                  {% else %}
+                    <div class="some classes">
+                      <a href="#" target="_blan2">Dummy text node goes here</a>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% else %}
+                <p class="some classes">
+                  <img src="/dummy-image.png" alt="Dummy alt goes here">Dummy text node goes here
+                </p>
+              {% endif %}
+              {% if _test_array_entry.attribute == _test_var14 and _test_var15 %}
+                <br><a href="#"><i class="some classes" aria-hidden="true"></i></a>Dummy text node goes here
+              {% elseif _test_array_entry.attribute == _test_var14 and _test_var16 %}
+                <br><a href="#"><i class="some classes" aria-hidden="true"></i></a>Dummy text node goes here<a href="#">Dummy text node goes here</a>
+                <br><a href="#"><i class="some classes" aria-hidden="true"></i></a>Dummy text node goes here<a href="#">Dummy text node goes here</a>
+              {% endif %}
+            </td>
+          {% endif %}
+          <td data-order="{{ _test_array_entry.attribute }}">
+            {% if _test_var5 %}
+              <div class="some classes">
+                <div class="box-default {% if _test_array_entry.attribute == 4 or _test_array_entry.attribute == 5 %}dummy-color-positive{% elseif _test_array_entry.attribute == 1 or _test_array_entry.attribute == 2 %}dummy-color-negative{% else %}dummy-color-neutral{% endif %}">
+                  <span class="some classes">
+                    
+                  </span>
+                </div>
+              </div>
+            {% else %}
+              <div class="some classes">
+                <div class="box-default {% if _test_array_entry.attribute == 4 or _test_array_entry.attribute == 5 %}dummy-color-positive{% elseif _test_array_entry.attribute == 1 or _test_array_entry.attribute == 2 %}dummy-color-negative{% else %}dummy-color-neutral{% endif %}">
+                  <span class="some classes">
+                    {{ _test_array_entry.attribute }} {% if _test_var13 and _test_array_entry.attribute in _test_array3 %}<img src="/dummy-image.png" data-toggle="tooltip" data-placement="top" title="Dummy title goes here" width="16" height="16">{% endif %}
+                  </span>
+                  {% if (_test_var13 or _test_var12) and (_test_array_entry.attribute > 0 or _test_array_entry.attribute > 0 or _test_array_entry.attribute > 0 or _test_array_entry.attribute > 0 or _test_array_entry.attribute > 0) %}
+                    <div class="some classes">
+                      <div class="some classes">
+                        <ul>
+                          {% if _test_array_entry.attribute > 0 %}
+                            <li>
+                              {% if _test_array_entry.attribute %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% else %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% endif %}
+                            </li>
+                          {% endif %}
+                          {% if _test_array_entry.attribute > 0 %}
+                            <li>
+                              {% if _test_array_entry.attribute %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% else %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% endif %}
+                            </li>
+                          {% endif %}
+                          {% if _test_array_entry.attribute > 0 %}
+                            <li>
+                              {% if _test_array_entry.attribute %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% else %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% endif %}
+                            </li>
+                          {% endif %}
+                          {% if _test_array_entry.attribute > 0 %}
+                            <li>
+                              {% if _test_array_entry.attribute %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% else %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% endif %}
+                            </li>
+                          {% endif %}
+                          {% if _test_array_entry.attribute > 0 %}
+                            <li>
+                              {% if _test_array_entry.attribute %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% else %}
+                                <div class="empty_rating_{{ 5 - _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <div class="rating_{{ _test_array_entry.rating|round(0, 'floor') }}"></div>
+                                <abbr data-toggle="tooltip" data-container="body" data-placement="top" title="Dummy title goes here">
+                                  Dummy text node goes here
+                                </abbr>
+                              {% endif %}
+                            </li>
+                          {% endif %}
+                        </ul>
+                      </div>
+                    </div>
+                  {% elseif _test_array_entry.attribute > 0 or _test_array_entry.attribute > 0 or _test_array_entry.attribute > 0 or _test_array_entry.attribute > 0 or _test_array.attribute > 0 %}
+                    <i class="some classes" aria-hidden="true" data-toggle="popover" title="Dummy title goes here" data-content='<img src="/dummy-image.png" alt="Dummy alt goes here">Dummy text node goes here<strong>Dummy text node goes here</strong> Dummy text node goes here.'></i>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          </td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if (_test_var1 or _test_var2) and _test_var3 < _test_var4 %}
+  {% if _test_var5 %}
+    {% if _test_var6 %}
+      <p>
+        Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+      </p>
+    {% else %}
+      <p>
+        Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+      </p>
+    {% endif %}
+  {% else %}
+    {% if _test_var6 %}
+      <p>
+        Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+      </p>
+    {% else %}
+      <p>
+        Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+      </p>
+    {% endif %}
+  {% endif %}
+{% elseif (_test_var1 or _test_var2) and _test_var3 == _test_var4 %}
+  {% if _test_var5 %}
+    <p>
+      Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+    </p>
+  {% else %}
+    <p>
+      Dummy text node goes here<a href="#">Dummy text node goes here</a>Dummy text node goes here
+    </p>
+  {% endif %}
+{% endif %}

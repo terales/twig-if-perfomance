@@ -42,3 +42,7 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+/twig1/vendor/
+/twig2/vendor/
+*.lock
