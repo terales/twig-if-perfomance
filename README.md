@@ -8,14 +8,14 @@ My results:
 
 ```
 // PHP 5.6 + Twig2
-inline-version.twig:  0.30611205101013
-include-version.twig: 0.0049479007720947
+inline-version.twig:  0.2901
+include-version.twig: 0.0051
 
 // PHP 7.1 + Twig1
-inline-version.twig:  0.043853998184204
-include-version.twig: 0.0012068748474121
+inline-version.twig:  0.0432
+include-version.twig: 0.0012
 
 // PHP 7.1 + Twig2
-inline-version.twig:  0.044877052307129
-include-version.twig: 0.0013439655303955
+inline-version.twig:  0.0391
+include-version.twig: 0.0011
 ```
